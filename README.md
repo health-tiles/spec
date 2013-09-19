@@ -2,6 +2,8 @@ Health Tiles
 ============
 Putting patient generated data at the fingertips of medical professionals.
 
+_This is a working draft. File issues. Make pull requests._
+
 **Objectives**
 - Visualize data from patient sources (devices to applications)
 - Integrate visualization within existing medical systems
@@ -44,5 +46,47 @@ An implementation pattern can be created using existing standards, specifically 
 
 Since IFRAMEs are being used, there is **no burden** on EHRs to process, store, or visualize data from patients. An EHR is only required to remember the URLs for each of the tiles and present them.
 
+**Authentication**
+
+(The set of steps for authentication need to be detailed. When a patient wants to add a Health Tile they will need to authorize their EHR to access to access their data. The most likely pattern is OAuth, but it can also be made simpler.)
+
 **Security**
-The ```sandbox``` ability of IFRAMES allows us to apply security rules and grant certain privileges to the content being displayed.
+
+The ```sandbox``` ability of IFRAMEs allows us to apply security rules and grant certain privileges to the content being displayed.
+
+**URLs**
+
+The authentication step will most likely give the EHR a "token" to use to retrieve the particular tile for the patient. It may look something like this:
+
+```https://some-health-tracker.org/[TOKEN]/tile```
+
+This also enables an EHR to retrieve a machine-readable blob with structured information:
+
+```https://some-health-tracker.org/[TOKEN]/json```
+
+**Example**
+
+For example, if a patient is using a digital insulin pump to manage their type I diabetes, they can add a a tile that displays their glucose readings over a period of time.
+
+![Glucose Example](assets/example1.png)
+
+The EHR would display the above by populating a sandboxed IFRAME with:
+
+```https://digital-insulin-pump.org/[TOKEN]/tile```
+
+If the EHR wanted to pull in any of the data, it could by retrieving the following URL:
+
+```https://digital-insulin-pump.org/[TOKEN]/json```
+
+Which could look something like:
+
+```
+{
+  "device": "Digital Insulin Pump",
+  "manufacturer": "ABC Corp.",
+  "readings": [
+    {"date": 20130915, "value": 100},
+    {"date": 20130914, "value": 140}
+  ]
+}
+```
