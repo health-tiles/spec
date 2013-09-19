@@ -14,16 +14,19 @@ Putting patient generated data at the fingertips of medical professionals.
 - Needs to be secure
 
 **Example Tiles**
+
 ![Glucose Example](assets/example1.png)
 ![Immunization Example](assets/example2.png)
 
 **Physician Experience**
+
 1. Pulls up a patient's record
 2. Sees Health Tile(s) that a patient has added
 
 For a physician or medical professional, seeing patient generated data is as easy as opening up the patient record.
 
 **Patient Experience**
+
 1. Logs into Patient Portal
 2. Adds a tile by picking from a list (or entering a URL)
 3. Authenticates with external service
