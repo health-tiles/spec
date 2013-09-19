@@ -58,11 +58,15 @@ The ```sandbox``` ability of IFRAMEs allows us to apply security rules and grant
 
 The authentication step will most likely give the EHR a "token" to use to retrieve the particular tile for the patient. It may look something like this:
 
-```https://some-health-tracker.org/[TOKEN]/tile```
+```
+https://some-health-tracker.org/[TOKEN]/tile
+```
 
 This also enables an EHR to retrieve a machine-readable blob with structured information:
 
-```https://some-health-tracker.org/[TOKEN]/json```
+```
+https://some-health-tracker.org/[TOKEN]/json
+```
 
 **Example**
 
@@ -72,11 +76,15 @@ For example, if a patient is using a digital insulin pump to manage their type I
 
 The EHR would display the above by populating a sandboxed IFRAME with:
 
-```https://digital-insulin-pump.org/[TOKEN]/tile```
+```
+https://digital-insulin-pump.org/[TOKEN]/tile
+```
 
 If the EHR wanted to pull in any of the data, it could by retrieving the following URL:
 
-```https://digital-insulin-pump.org/[TOKEN]/json```
+```
+https://digital-insulin-pump.org/[TOKEN]/json
+```
 
 Which could look something like:
 
