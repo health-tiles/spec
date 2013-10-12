@@ -93,8 +93,8 @@ Which could look something like:
   "device": "Digital Insulin Pump",
   "manufacturer": "ABC Corp.",
   "readings": [
-    {"date": 20130915, "value": 100},
-    {"date": 20130914, "value": 140}
+    {"date": "20130915", "value": 100},
+    {"date": "20130914", "value": 140}
   ]
 }
 ```
