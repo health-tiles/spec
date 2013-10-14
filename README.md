@@ -70,7 +70,7 @@ https://some-health-tracker.org/[TOKEN]/json
 
 **Example**
 
-For example, if a patient is using a digital insulin pump to manage their type I diabetes, they can add a a tile that displays their glucose readings over a period of time.
+For example, if a patient is using a digital insulin pump to manage type I diabetes, they can add a tile that displays their glucose readings over a period of time.
 
 ![Glucose Example](assets/example1.png)
 
