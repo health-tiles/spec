@@ -46,9 +46,9 @@ An implementation pattern can be created using existing standards, specifically 
 
 Since IFRAMEs are being used, there is **no burden** on EHRs to process, store, or visualize data from patients. An EHR is only required to remember the URLs for each of the tiles and present them.
 
-**Authentication**
+**Authorization**
 
-(The set of steps for authentication need to be detailed. When a patient wants to add a Health Tile they will need to authorize their EHR to access to access their data. The most likely pattern is OAuth, but it can also be made simpler.)
+(The set of steps for authorization need to be detailed. When a patient wants to add a Health Tile they will need to authorize their EHR to access to access their data. The most likely pattern is OAuth, but it can also be made simpler.)
 
 **Security**
 
